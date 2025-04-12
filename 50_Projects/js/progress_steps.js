@@ -11,7 +11,6 @@ btns.forEach((btn) => {
         btn.id == nextbtn.id ? circleSelector(++index) : circleSelector(index--)
         // @ts-ignore
         index === 0 ? prevbtn.disabled = true :
-            // @ts-ignore
             index === circles.length - 1 ? nextbtn.disabled = true :
                 // @ts-ignore
                 (nextbtn.disabled = false, prevbtn.disabled = false)
