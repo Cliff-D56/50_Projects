@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC+Guides&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC+Guides&family=Sixtyfour&display=swap');
 
-:root{
+:root {
     --line-border-fill: cornflowerblue;
-    --line-border-empty:#e0e0e0;
-    --line-border-circleborder:grey;
+    --line-border-empty: #e0e0e0;
+    --line-border-circleborder: grey;
 }
-*{
+
+* {
     box-sizing: border-box;
 }
 
@@ -17,13 +18,14 @@ body {
     justify-content: center;
     overflow: hidden;
     height: 100vh;
-    margin:0
+    margin: 0
 }
 
-.container{
+.container {
     text-align: center;
 }
-.progress-container{
+
+.progress-container {
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -32,9 +34,9 @@ body {
     width: 350px;
 }
 
-.progress-container::before{
-    content:"";
-    background-color:var(--line-border-circleborder);
+.progress-container::before {
+    content: "";
+    background-color: var(--line-border-circleborder);
     position: absolute;
     top: 50%;
     left: 0;
@@ -43,7 +45,8 @@ body {
     transform: translateY(-50%);
     z-index: -1;
 }
-.progress{
+
+.progress {
     background-color: var(--line-border-fill);
     position: absolute;
     top: 50%;
@@ -54,11 +57,12 @@ body {
     z-index: -1;
     transition: 0.4s ease;
 }
+
 .circle {
     background-color: #fff;
     color: gray;
     border-radius: 50%;
-    height:30px;
+    height: 30px;
     width: 30px;
     display: flex;
     align-items: center;
@@ -66,9 +70,11 @@ body {
     border: 3px solid var(--line-border-empty);
     transition: .4s ease;
 }
+
 .circle.active {
     border-color: var(--line-border-fill);
 }
+
 .btn {
     background-color: var(--line-border-fill);
     color: white;
@@ -84,15 +90,18 @@ body {
 .btn:active {
     transform: scale(0.98);
 }
-.btn:focus{
+
+.btn:focus {
     outline: 0;
 }
-.btn:disabled{
+
+.btn:disabled {
     background-color: var(--line-border-empty);
     cursor: not-allowed;
 }
-@media(max-width:480px){
-    .container{
+
+@media(max-width:480px) {
+    .container {
         width: 100vw;
     }
 }
